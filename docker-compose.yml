@@ -58,6 +58,7 @@ services:
       # TODO：請確認你程式碼裡簽發 JWT 用的環境變數名稱是否就是 JWT_SECRET，
       # 若不是（例如 JWT_EXPIRES_DAY 之類的相關設定也需要），請對照你的 controllers 補齊/修正
       - JWT_SECRET=AbCdEfGhIjK
+      - JWT_EXPIRES_DAY=30d
     depends_on:
       postgres:
         condition: service_healthy
