@@ -21,7 +21,9 @@ const dataSource = new DataSource({
   database: process.env.DB_DATABASE || 'fitness',
 
   // ⚠️ 鐵律：synchronize 固定為 false，將 ORM 自動同步結構關閉，避免它動到正式資料；結構一律走 Migration
-  synchronize: false,
+  // synchronize: false,
+    // 讀環境變數；正式環境不要設定 DB_SYNCHRONIZE=true，就會維持關閉
+  synchronize: process.env.DB_SYNCHRONIZE === 'true',
 
   entities: [
     // TODO: 你的 entities
