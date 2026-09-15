@@ -7,7 +7,7 @@ const User = require('../entities/User')
 const Skill = require('../entities/Skill')
 const Course = require('../entities/Course')
 const Coach = require('../entities/Coach')
-const CoachLinkSkiLL = require('../entities/CoachLinkSkiLL')
+const CoachLinkSkill = require('../entities/CoachLinkSkill')
 const CourseBooking = require('../entities/CourseBooking')
 const CreditPurchase = require('../entities/CreditPurchase')
 
@@ -25,7 +25,7 @@ const dataSource = new DataSource({
 
   entities: [
     // TODO: 你的 entities
-     CreditPackage, User, Skill, Course, Coach, CoachLinkSkiLL , CourseBooking, CreditPurchase
+     CreditPackage, User, Skill, Course, Coach, CoachLinkSkill , CourseBooking, CreditPurchase
   ],
   migrations: ['db/migrations/*.js'],
 })
